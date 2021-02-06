@@ -16,7 +16,8 @@ class _LoadingState extends State<Loading> {
     Navigator.pushReplacementNamed(context, "/home",  arguments: {
      'location' : worldTime.location,
      'flag' : worldTime.flag,
-     'time' : worldTime.time
+     'time' : worldTime.time,
+      'isDayTime' : worldTime.isDayTime
     });
     
   }
@@ -28,6 +29,7 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[200],
       body: Center(
         child: SpinKitFadingCircle(
           color: Colors.black,
